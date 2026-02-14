@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
-        /* Optional: Hide elements initially so they don't flash before animating */
-        .entry, li, h2 {
+        /* Hide animation blocks initially to prevent flashing */
+        .animate-block, li, h2 {
             visibility: hidden; 
         }
     </style>
@@ -32,9 +32,9 @@
                 </p>
                 <p>
                     <a href="mailto:adhika38@purdue.edu">Email</a> &nbsp;/&nbsp;
-                    <a href="https://scholar.google.com">Google Scholar</a> &nbsp;/&nbsp;
-                    <a href="https://github.com/priyoadhikary">GitHub</a> &nbsp;/&nbsp;
-                    <a href="#">CV</a>
+                    <a href="https://scholar.google.com/citations?user=r1HWDVMAAAAJ&hl=en">Google Scholar</a> &nbsp;/&nbsp;
+                    <a href="https://www.linkedin.com/in/priyo-adhikary-68941459/">LinkedIn</a> &nbsp;/&nbsp;
+                    <a href="https://github.com/priyoadhikary">GitHub</a> 
                 </p>
             </div>
         </header>
@@ -61,7 +61,7 @@
                 <li>
                     <strong>Ph.D. in Physics</strong> (2015 – 2021)<br>
                     Indian Institute of Science (IISc), Bangalore, India.<br>
-                    <em>Thesis Advisor:</em> Dr. Tanmoy Das
+                    
                 </li>
                 <li>
                     <strong>M.Sc. in Physics</strong> (2011 – 2013)<br>
@@ -79,30 +79,24 @@
         <section id="research-highlights">
             <h2>Research Highlights</h2>
             
-            <div class="entry">
-                <div class="entry-image">
-                    <img src="research_highlight.png" alt="Research Overview" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
-                </div>
-                <div class="entry-text">
-                    <h3>Quantum Defects in 2D Materials</h3>
-                    <p>
-                        Investigating the broadband relaxation dynamics of Boron-Vacancy centers in hexagonal Boron Nitride. 
-                        I use ab-initio spin-phonon relaxation theory to compute coupling coefficients and phonon-limited relaxation times.
-                    </p>
-                </div>
+            <div class="animate-block" style="text-align: center; margin-bottom: 40px;">
+                <img src="research_highlight.png" alt="Research Overview" style="max-width: 100%; width: 600px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
             </div>
 
-            <div class="entry">
-                <div class="entry-image">
-                    <div class="placeholder-box">Superconductivity Plot</div>
-                </div>
-                <div class="entry-text">
-                    <h3>Unconventional Superconductivity</h3>
-                    <p>
-                        Predicting gap symmetries (e.g., <em>d</em>-wave, <em>f</em>-wave) in cuprates and nickelates. 
-                        My recent work explores unique <i>d</i><sub>xy</sub>-wave superconductivity in Ba<sub>2</sub>CuO<sub>3.25</sub> and orbital-selective pairing mechanisms.
-                    </p>
-                </div>
+            <div class="entry-text animate-block" style="margin-bottom: 30px;">
+                <h3>Quantum Defects in 2D Materials</h3>
+                <p>
+                    Investigating the broadband relaxation dynamics of Boron-Vacancy centers in hexagonal Boron Nitride. 
+                    I use ab-initio spin-phonon relaxation theory to compute coupling coefficients and phonon-limited relaxation times.
+                </p>
+            </div>
+
+            <div class="entry-text animate-block">
+                <h3>Unconventional Superconductivity</h3>
+                <p>
+                    Predicting gap symmetries (e.g., <em>d</em>-wave, <em>f</em>-wave) in cuprates and nickelates. 
+                    My recent work explores unique <i>d</i><sub>xy</sub>-wave superconductivity in Ba<sub>2</sub>CuO<sub>3.25</sub> and orbital-selective pairing mechanisms.
+                </p>
             </div>
         </section>
 
@@ -215,9 +209,9 @@
     <script>
         gsap.registerPlugin(ScrollTrigger);
 
-        // 1. Animate Research Entries (Slide Up)
-        gsap.utils.toArray('.entry').forEach(entry => {
-            gsap.fromTo(entry, 
+        // 1. Animate Research Blocks
+        gsap.utils.toArray('.animate-block').forEach(block => {
+            gsap.fromTo(block, 
                 { autoAlpha: 0, y: 50 }, 
                 { 
                     autoAlpha: 1, 
@@ -225,7 +219,7 @@
                     duration: 1, 
                     ease: "power3.out",
                     scrollTrigger: {
-                        trigger: entry,
+                        trigger: block,
                         start: "top 85%",
                         toggleActions: "play none none reverse"
                     }
@@ -233,7 +227,7 @@
             );
         });
 
-        // 2. Animate List Items (Slide In from Left)
+        // 2. Animate List Items
         gsap.utils.toArray('li').forEach((item, i) => {
             gsap.fromTo(item, 
                 { autoAlpha: 0, x: -20 }, 
@@ -251,7 +245,7 @@
             );
         });
 
-        // 3. Animate Section Headings (Fade In)
+        // 3. Animate Section Headings
         gsap.utils.toArray('h2').forEach(heading => {
             gsap.fromTo(heading, 
                 { autoAlpha: 0 }, 
@@ -268,5 +262,5 @@
             );
         });
     </script>
-    </body>
+</body>
 </html>
