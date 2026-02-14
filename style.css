@@ -1,0 +1,96 @@
+/*
+  style.css - A minimalist style inspired by Andrej Karpathy's website,
+  with an added animation for the 'blochspehere.jpg' image.
+*/
+
+:root {
+    --primary-color: #333; /* Dark grey for text */
+    --link-color: #0056b3; /* A pleasant blue for links */
+    --background-color: #fff; /* White background */
+    --font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    --content-width: 700px; /* Narrow column width */
+}
+
+body {
+    font-family: var(--font-stack);
+    line-height: 1.6;
+    color: var(--primary-color);
+    background-color: var(--background-color);
+    margin: 0;
+    padding: 20px;
+}
+
+/* Main content container to center text and limit width */
+.container {
+    max-width: var(--content-width);
+    margin: 0 auto; /* Center the container */
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+/* Headings */
+h1, h2, h3 {
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+h1 {
+    font-size: 2.2rem;
+    margin-top: 0;
+}
+
+/* Links */
+a {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Paragraphs */
+p {
+    margin-bottom: 1.5rem;
+}
+
+/* Image styling */
+img {
+    max-width: 100%; /* Ensure images don't overflow the container */
+    height: auto;
+    display: block; /* Remove bottom space/align correctly */
+    margin: 20px auto; /* Center images with some vertical spacing */
+}
+
+/* --- Animation for 'blochspehere.jpg' --- */
+
+/* Define the rotation animation */
+@keyframes slowRotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Apply the animation to the specific image */
+img[src="blochspehere.jpg"] {
+    /*
+      Animation breakdown:
+      - name: slowRotate (defined above)
+      - duration: 20s (a slow, subtle rotation)
+      - timing-function: linear (constant speed)
+      - iteration-count: infinite (loops forever)
+    */
+    animation: slowRotate 20s linear infinite;
+    
+    /* Optional: adds a soft shadow to make it pop slightly */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    border-radius: 50%; /* Ensures the image is perfectly round if it's a square */
+}
+
+/* Optional: Add a subtle hover effect to pause the animation */
+img[src="blochspehere.jpg"]:hover {
+    animation-play-state: paused;
+}

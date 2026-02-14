@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Priyo Adhikary</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Optional: Hide elements initially so they don't flash before animating */
+        .entry, li, h2 {
+            visibility: hidden; 
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <header>
+            <div class="profile-photo">
+                <img src="https://via.placeholder.com/150" alt="Priyo Adhikary">
+            </div>
+            <div class="bio">
+                <h1>Priyo Adhikary</h1>
+                <p>
+                    Postdoctoral Researcher at the Elmore Family School of Electrical and Computer Engineering, <a href="https://www.purdue.edu/">Purdue University</a>.<br>
+                    Previously: Postdoctoral Fellow at IIT Madras; Ph.D. from IISc Bangalore.
+                </p>
+                <p>
+                    I am a theoretical condensed matter physicist. My work integrates ab-initio (DFT/DFPT) and many-body methods to investigate <strong>spin-phonon physics</strong>, <strong>quantum defects</strong> (specifically VB<sup>-</sup> in h-BN), and <strong>unconventional superconductivity</strong> in correlated materials like cuprates and infinite-layer nickelates.
+                </p>
+                <p>
+                    <a href="mailto:adhika38@purdue.edu">Email</a> &nbsp;/&nbsp;
+                    <a href="https://scholar.google.com">Google Scholar</a> &nbsp;/&nbsp;
+                    <a href="https://github.com/priyoadhikary">GitHub</a> &nbsp;/&nbsp;
+                    <a href="#">CV</a>
+                </p>
+            </div>
+        </header>
+
+        <hr>
+
+        <section id="positions">
+            <h2>Positions</h2>
+            <ul>
+                <li>
+                    <strong>Post-Doctoral Research Assistant</strong> (Oct 2024 – Present)<br>
+                    Elmore Family School of Electrical and Computer Engineering, Purdue University, USA.
+                </li>
+                <li>
+                    <strong>Postdoctoral Fellow</strong> (Jan 2022 – Oct 2024)<br>
+                    Department of Physics, Indian Institute of Technology Madras, India.
+                </li>
+            </ul>
+        </section>
+
+        <section id="education">
+            <h2>Education</h2>
+            <ul>
+                <li>
+                    <strong>Ph.D. in Physics</strong> (2015 – 2021)<br>
+                    Indian Institute of Science (IISc), Bangalore, India.<br>
+                    <em>Thesis Advisor:</em> Dr. Tanmoy Das
+                </li>
+                <li>
+                    <strong>M.Sc. in Physics</strong> (2011 – 2013)<br>
+                    Indian Institute of Technology (IIT) Kanpur, India.
+                </li>
+                <li>
+                    <strong>B.Sc. in Physics (Honors)</strong> (2008 – 2011)<br>
+                    Asutosh College, Calcutta University, West Bengal, India.
+                </li>
+            </ul>
+        </section>
+
+        <hr>
+
+        <section id="research-highlights">
+            <h2>Research Highlights</h2>
+            
+            <div class="entry">
+                <div class="entry-image">
+                    <img src="research_highlight.png" alt="Research Overview" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                </div>
+                <div class="entry-text">
+                    <h3>Quantum Defects in 2D Materials</h3>
+                    <p>
+                        Investigating the broadband relaxation dynamics of Boron-Vacancy centers in hexagonal Boron Nitride. 
+                        I use ab-initio spin-phonon relaxation theory to compute coupling coefficients and phonon-limited relaxation times.
+                    </p>
+                </div>
+            </div>
+
+            <div class="entry">
+                <div class="entry-image">
+                    <div class="placeholder-box">Superconductivity Plot</div>
+                </div>
+                <div class="entry-text">
+                    <h3>Unconventional Superconductivity</h3>
+                    <p>
+                        Predicting gap symmetries (e.g., <em>d</em>-wave, <em>f</em>-wave) in cuprates and nickelates. 
+                        My recent work explores unique <i>d</i><sub>xy</sub>-wave superconductivity in Ba<sub>2</sub>CuO<sub>3.25</sub> and orbital-selective pairing mechanisms.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <section id="methods">
+            <h2>Research Areas & Methods</h2>
+            <ul>
+                <li>
+                    I study <strong>unconventional superconductivity</strong> in cuprates and infinite-layer nickelates, using spin-fluctuation mechanisms to predict gap symmetries (e.g., <em>d</em>-wave) and to assess rare-earth <em>f</em>-orbital effects on the superconducting state.
+                </li>
+                <li>
+                    I investigate <strong>spin–phonon physics and quantum defects</strong>—especially the VB<sup>-</sup> center in h-BN—by computing DFT-based coupling spectra and phonon-limited T<sub>1</sub> relaxation.
+                </li>
+                <li>
+                    My workflow integrates <strong>ab-initio and many-body methods</strong>: DFT/DFPT, Wannierization, multiband Hubbard, RPA, BdG, and Eliashberg theory to probe emergent phases in correlated materials.
+                </li>
+                <li>
+                    I also explore <strong>interlayer excitons</strong> in 2D heterostructures and moiré transport phenomena such as weak localization in graphene/h-BN bilayers.
+                </li>
+                <li>
+                    <strong>Methodologically</strong>, I build scalable, reproducible HPC pipelines in Python/Fortran around VASP, Quantum ESPRESSO, Phonopy/EPW, and Wannier90, parallelized with MPI/OpenMP/SLURM.
+                </li>
+            </ul>
+        </section>
+
+        <hr>
+
+        <section id="publications">
+            <h2>Journal Publications</h2>
+            <ul>
+                <li>
+                    <strong>Broadband Relaxation Dynamics of Boron-Vacancy Centers in Hexagonal Boron Nitride</strong><br>
+                    A.B. Solanki, Y.-C. Wu, H. Ather, <strong>Priyo Adhikary</strong>, A. Shankar, I. Gallagher, X. Gao, O.M. Matthiessen, D. Sychev, A. Lagoutchev, T. Li, Y.P. Chen, V.M. Shalaev, B. Lawrie, and P. Upadhyaya.<br>
+                    <em>arXiv:2507.16786</em> (2025).
+                </li>
+                
+                <li>
+                    <strong>Room Temperature, Twist Angle Independent, Momentum Direct Interlayer Excitons in van der Waals heterostructures with Wide Spectral Tunability</strong><br>
+                    S. Poudyal, M. Deka, <strong>Priyo Adhikary</strong>, R. Ranju, P. K. Barman, R. Yadav, B. Biswal, R. Rajarapu, S. Mukherjee, B. R. K. Nanda, A. Singh, and A. Misra.<br>
+                    <em>Nano Letters</em> (2024). <a href="https://doi.org/10.1021/acs.nanolett.4c02180">doi:10.1021/acs.nanolett.4c02180</a>.
+                </li>
+                
+                <li>
+                    <strong>Unique d<sub>xy</sub>-wave superconductivity in Ba<sub>2</sub>CuO<sub>3.25</sub></strong><br>
+                    <strong>Priyo Adhikary</strong>, M. G, A. C, Sashi Satpathy, Shantanu Mukherjee, B. R. K. Nanda.<br>
+                    <em>Phys. Rev. B</em> 109, L020505 (2024).
+                </li>
+
+                <li>
+                    <strong>Doping induced singlet to triplet superconducting transition in Ba<sub>2</sub>CuO<sub>3+&delta;</sub></strong><br>
+                    <strong>Priyo Adhikary</strong>, M. G, B. R. K. Nanda, Shantanu Mukherjee.<br>
+                    <em>Phys. Rev. B</em> 109, 224503 (2024).
+                </li>
+
+                <li>
+                    <strong>Signatures of orbital selective Mott state in doped Sr<sub>3</sub>Ru<sub>2</sub>O<sub>7</sub></strong><br>
+                    B. D, A.D, <strong>Priyo Adhikary</strong>, Shantanu Mukherjee.<br>
+                    <em>Phys. Rev. Materials</em> 7, 035001 (2023).
+                </li>
+
+                <li>
+                    <strong>Novel attractive pairing interaction in strongly correlated superconductors</strong><br>
+                    <strong>Priyo Adhikary</strong>, Tanmoy Das.<br>
+                    <em>SciPost Phys.</em> 7, 078 (2019).
+                </li>
+
+                <li>
+                    <strong>Prediction of f-wave pairing symmetry in YBa<sub>2</sub>Cu<sub>3</sub>O<sub>6+x</sub> cuprates</strong><br>
+                    <strong>Priyo Adhikary</strong>, Tanmoy Das.<br>
+                    <em>Phys. Rev. B</em> 101, 214517 (2020).
+                </li>
+
+                <li>
+                    <strong>Orbital Selective Superconductivity in a Two band Model of Infinite-Layer Nickelates</strong><br>
+                    <strong>Priyo Adhikary</strong>, S. B, Tanmoy Das, Indra Dasgupta, Tanusri Saha-Dasgupta.<br>
+                    <em>Phys. Rev. B</em> 102, 100501(R) (2020).
+                </li>
+
+                <li>
+                    <strong>Superconductivity in Infinite-layer Nickelates: Role of f orbital</strong><br>
+                    S. B, <strong>Priyo Adhikary</strong>, Tanmoy Das, Indra Dasgupta, Tanusri Saha-Dasgupta.<br>
+                    <em>Phys. Rev. B</em> 102, 220502(R) (2020).
+                </li>
+
+                <li>
+                    <strong>Localization physics in graphene moir&eacute; superlattices</strong><br>
+                    C. K, S. K. S, <strong>Priyo Adhikary</strong>, Sumilan Banerjee, Tanmoy Das, and Anindya Das.<br>
+                    <em>Phys. Rev. B</em> 98, 155408 (2018).
+                </li>
+
+                <li>
+                    <strong>Mixed type I and type II superconductivity due to intrinsic electronic inhomogeneities in the type II Dirac semimetal PdTe<sub>2</sub></strong><br>
+                    A. S, S. D., <strong>Priyo Adhikary</strong>, R. R. C, A. V, Y. S, S. G, Tanmoy Das, Goutam Sheet.<br>
+                    <em>J. Phys. Condens. Matter</em> 31, 085701 (2019).
+                </li>
+            </ul>
+        </section>
+
+        <hr>
+        
+        <footer style="margin-top: 40px; font-size: 0.9em; color: #666;">
+            <p>&copy; 2026 Priyo Adhikary. Built with pure HTML/CSS.</p>
+        </footer>
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+
+        // 1. Animate Research Entries (Slide Up)
+        gsap.utils.toArray('.entry').forEach(entry => {
+            gsap.fromTo(entry, 
+                { autoAlpha: 0, y: 50 }, 
+                { 
+                    autoAlpha: 1, 
+                    y: 0, 
+                    duration: 1, 
+                    ease: "power3.out",
+                    scrollTrigger: {
+                        trigger: entry,
+                        start: "top 85%",
+                        toggleActions: "play none none reverse"
+                    }
+                }
+            );
+        });
+
+        // 2. Animate List Items (Slide In from Left)
+        gsap.utils.toArray('li').forEach((item, i) => {
+            gsap.fromTo(item, 
+                { autoAlpha: 0, x: -20 }, 
+                { 
+                    autoAlpha: 1, 
+                    x: 0, 
+                    duration: 0.6, 
+                    ease: "power2.out",
+                    scrollTrigger: {
+                        trigger: item,
+                        start: "top 95%",
+                        toggleActions: "play none none reverse"
+                    }
+                }
+            );
+        });
+
+        // 3. Animate Section Headings (Fade In)
+        gsap.utils.toArray('h2').forEach(heading => {
+            gsap.fromTo(heading, 
+                { autoAlpha: 0 }, 
+                { 
+                    autoAlpha: 1, 
+                    duration: 0.8, 
+                    ease: "power1.in",
+                    scrollTrigger: {
+                        trigger: heading,
+                        start: "top 90%",
+                        toggleActions: "play none none reverse"
+                    }
+                }
+            );
+        });
+    </script>
+    </body>
+</html>
